@@ -35,7 +35,7 @@ Alongside it:
 | File | | What it holds |
 |---|---|---|
 | `README.md` | required | What the project is, and where it stands now. |
-| `CHANGELOG.md` | required | One entry per commit to this repo, newest first. |
+| `CHANGELOG.md` | required | One entry per commit to this repo, newest first (README and roadmap updates aside). |
 | `ROADMAP.md` | optional | The goal, deliverables, next milestone and todos. |
 | `sessions/` | when used | One file per session that committed here. |
 | `AGENTS.md` | optional | This project's own facts and limits (below). |
@@ -65,8 +65,10 @@ Also: acme/storefront#42
 - `Session:` links the session file, if the commit came out of a session.
 - `Also:` lists commits or pull requests the same work made in the project's other repos, if any.
 
-Merge commits don't need an entry. A pull request lands as one squashed commit with one entry. A repo that adopts the
-format starts its changelog then; its earlier history stays in `git log`.
+A commit that changes only `README.md` or `ROADMAP.md` (a todo checked off, a status line brought up to date) doesn't
+need an entry: those files say where the project stands now, and `git log` keeps their history. Merge commits don't need
+an entry either. A pull request lands as one squashed commit with one entry. A repo that adopts the format starts its
+changelog then; its earlier history stays in `git log`.
 
 ## ROADMAP.md (optional)
 
